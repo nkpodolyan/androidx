@@ -256,7 +256,7 @@ abstract class TaskUpToDateValidator :
         // Tells whether to create a TaskUpToDateValidator listener
         private fun shouldEnable(project: Project): Boolean {
             return project.providers.gradleProperty(ENABLE_FLAG_NAME)
-                .forUseAtConfigurationTime().isPresent
+                .isPresent
         }
 
         private fun isAllowedToRerunTask(taskPath: String): Boolean {

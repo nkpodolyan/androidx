@@ -35,6 +35,8 @@ playground {
         if (name == ":internal-testutils-navigation") return true
         if (name == ":internal-testutils-runtime") return true
         if (name == ":internal-testutils-truth") return true
+        if (name == ":hilt:hilt-navigation") return true
+        if (name == ":hilt:hilt-navigation-fragment") return true
         if (isNeededForComposePlayground(name)) return true
         return false
     })

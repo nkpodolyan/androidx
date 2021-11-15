@@ -54,7 +54,7 @@ fun isPresubmitBuild(): Boolean {
  */
 fun Project.getDistributionDirectory(): File {
     val envVar = project.providers.environmentVariable("DIST_DIR")
-        .forUseAtConfigurationTime().getOrElse("")
+        .getOrElse("")
     return if (envVar != "") {
         File(envVar)
     } else {

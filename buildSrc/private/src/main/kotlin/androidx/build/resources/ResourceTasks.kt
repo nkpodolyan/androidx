@@ -115,7 +115,7 @@ object ResourceTasks {
             task.dependsOn(generateResourceApi)
             task.outputApiLocations.set(outputApiLocations)
             task.forceUpdate.set(
-                project.providers.gradleProperty("force").forUseAtConfigurationTime().isPresent
+                project.providers.gradleProperty("force").isPresent
             )
             checkResourceApiRelease?.let {
                 // If a developer (accidentally) makes a non-backwards compatible change to an

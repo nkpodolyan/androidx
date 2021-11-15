@@ -172,7 +172,7 @@ fun Project.configureLint(lint: Lint, extension: AndroidXExtension) {
 
     // If -PupdateLintBaseline was set we should update the baseline if it exists
     val updateLintBaseline = project.providers.gradleProperty(UPDATE_LINT_BASELINE)
-        .forUseAtConfigurationTime().isPresent && !isTestingLintItself
+        .isPresent && !isTestingLintItself
 
     lint.apply {
         // Skip lintVital tasks on assemble. We explicitly run lintRelease for libraries.
